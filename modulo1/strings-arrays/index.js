@@ -35,7 +35,7 @@ console.log ("Essas são as suas tarefas agendadas:")
     console.log ("1." + tarefasDoDia[0])
     console.log ("2." + tarefasDoDia[1])
     console.log ("3." + tarefasDoDia[2])
-let concluidas = +prompt ("Digite o número da atividade concluída")
+let concluidas = +prompt ("Digite o número da atividade concluída") -1
 let finalizadas = tarefasDoDia.splice(concluidas - 1)
 
 console.log (tarefasDoDia)
