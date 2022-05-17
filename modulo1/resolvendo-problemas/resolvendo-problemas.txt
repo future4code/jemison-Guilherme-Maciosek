@@ -1,0 +1,20 @@
+1 - Ter atenção no Enunciado
+Devemos ler e reler para entender o que está sendo solicitado.
+
+2 - Retirar informações relevantes
+Buscar pelas palavras chaves dentro dos enunciados, irão facilitar a resolução.
+
+3 - Pensar em entradas e saídas
+Pensar nos dados que vamos utilizar e o que iremos retornar ao final do exercício
+
+4 - Fazer um esquema visual
+Colocar as informações dentro do VSCode ou outra plataforma que esteja utilizando, devendo usar bastante dos comentários para gravar todas as ideias.
+
+5 - Criar código feio
+Criar um código básico que retorne os valores solicitados
+
+6 - Testar força bruta
+Realizar testes com o que já se conhece e buscar por novas soluções até obter o resultado final
+
+7 - Refatorar
+Realizar correções que podem acarretar em problemas futuros, alterar algumas sintaxes para otimizar o código. Só deverá ser feito quando o código já estiver funcionando.
