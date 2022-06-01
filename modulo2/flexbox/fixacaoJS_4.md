@@ -4,11 +4,10 @@ function contaOcorrencias(arrayDeNumeros, numeroEscolhido) {
     for (i = 0; i < arrayDeNumeros.length; i++){
       if (arrayDeNumeros[i] === numeroEscolhido){
         contagem++
-      } if (contagem > 0) {
+      }} if (contagem > 0) {
         return `O número ${numeroEscolhido} aparece ${contagem}x`
         } else {
         return `Número não encontrado`
       }      
     }
-}
 ```
