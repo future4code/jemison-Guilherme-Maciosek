@@ -1,0 +1,79 @@
+/* Configurações reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Configurações head do site */
+
+.grid-top {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    justify-items: start;
+    background: darkorange;
+    height: 100px;
+}
+
+.nome-da-pagina {
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    margin: 10px;
+    
+}
+
+.ajustes-campo-busca {
+    height: 30px;
+    width: 120px;
+}
+
+/* Configurações Conteúdo principal */
+
+.pai {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    margin: 20px;
+}
+
+.grid-videos {
+    border: 2px solid green;
+}
+
+.size-thumb {
+    font-weight: 30px;
+}
+
+.grid-videos > p {
+    padding: 20px;
+}
+
+/* Configurações rodapé */
+
+footer {
+    font-size: 30px;
+    display: grid;
+    align-items: center;    
+    height: 90px;
+    background: rgb(34, 39, 39);
+    color: white;
+}
+
+.config-rodape {
+    margin: 10px;
+}
+
+
+/* Config Página Média */
+
+.alinhamento-body {
+    margin: 10px;
+}
+
+.alinhamento-video {
+    margin: 20px;
+}
+
