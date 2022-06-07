@@ -1,0 +1,112 @@
+/*Configurações gerais da página*/
+body {
+    background-image: url(img/background-site.jpg);
+    width: 100%;
+}
+
+/*Configurações Gerais Comuns a todas as Páginas*/
+
+.top-profile {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 100;
+font-size: 40px;
+text-align: center;
+width: 100%;
+color: white;
+}
+
+nav {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    background-color: rgb(61, 66, 64);
+    padding: 10px;
+    border: 50px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+/*Configurações Página Contato*/
+
+form {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    line-height: 1.7; 
+    color: white;       
+}
+
+#caixa {
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.logo {
+    position: relative;
+    bottom: 20px;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Configurações Página Home*/
+
+#apresentação{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align:center;
+    width: 100%;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: white;
+    
+}
+
+/*Configurações Página Trabalho*/
+
+
+#projetos {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: white;
+}
+
+#projetos-tr > td {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid black;
+}
+
+.largura-projeto {
+    width: 200px;
+}
+
+/*Configurações Página Trabalho-blackjack*/
+
+.titulo-21 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: white;
+}
