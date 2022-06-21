@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.logo {
+  height: 550px;
+  margin: 4vh;
+}
+
+.botao {
+  background: white;
+  border-radius: 5px;
+  border-color: rgba(255, 254, 254, 0.623);
+}
