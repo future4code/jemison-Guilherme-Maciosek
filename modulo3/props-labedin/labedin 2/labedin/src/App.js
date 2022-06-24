@@ -5,6 +5,7 @@ import CardGrande from './components/CardGrande/CardGrande';
 import CardPequeno from './components/CardPequeno/CardPequeno';
 import ImagemButton from './components/ImagemButton/ImagemButton';
 
+
 function App() {
   return (
     <div className="App">
@@ -24,7 +25,7 @@ function App() {
 
       <div className="page-section-container">
         <CardPequeno
-          imagem=""
+          imagem="https://cdn-icons-png.flaticon.com/512/4812/4812397.png"
           email="E-mail:&nbsp;"
           descricao="glmaciosek@gmail.com"
         />  
@@ -32,7 +33,7 @@ function App() {
 
       <div className="page-section-container">
         <CardEndereco
-          imagem=""
+          imagem="https://cdn.iconscout.com/icon/free/png-256/gps-632-893493.png"
           endereco="Endereço:&nbsp;"
           descricao="Santa Cândida, Curitiba-PR - Brazil"
         />  
@@ -47,9 +48,9 @@ function App() {
         />
         
         <CardGrande 
-          imagem="https://logodownload.org/wp-content/uploads/2019/03/nasa-logo-0-768x768.png" 
-          nome="NASA" 
-          descricao="Apontando defeitos." 
+          imagem="https://media-exp1.licdn.com/dms/image/C4D0BAQHFsVkm-0t4fA/company-logo_200_200/0/1643414338931?e=2147483647&v=beta&t=3GxbzolZn6ULI3MuEN4ZXuDaPvJp_S7B3ikzwxQur0U" 
+          nome="UHG" 
+          descricao="Supervisor de atendimento, onde fora realizado o trabalho de desenvolvimento dos colaboradores em minha hierarquia. Buscando sempre o melhor atendimento ao cliente" 
         />
       </div>
 
