@@ -11,7 +11,7 @@ const MainContainer = styled.div`
   align-items: center;
 `
 function App() {
-
+// post
   const [posts, setPosts] = useState ([
     {
       nomeUsuario: 'Paulinha',
