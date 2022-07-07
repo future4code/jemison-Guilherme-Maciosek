@@ -27,3 +27,9 @@ export const CaixaInput = styled.section`
     justify-content: end;
     
 `
+
+export const CaixaDeMensagem = styled.p`
+    display: flex;
+    background-color: black;
+    size: 50px;
+`

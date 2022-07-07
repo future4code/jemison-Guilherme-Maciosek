@@ -1,27 +1,66 @@
 import React, { useState } from 'react'
 import { DisplayStyle } from "./displayStyle";
 import { CaixaInput } from './displayStyle';
-
-
+import { CaixaDeMensagem} from './displayStyle'
 
 function DisplayLabenu () {
-    const [nome, setNome] = useState ("")
-    const [mensagem, setMensagem] = useState ("")
-	function insereNome(event){
-		setNome(event.target.value)
+    const [inputNome, setInputNome] = useState ("")
+    const [InputMensagem, setInputMensagem] = useState ("")
+    const [inputMensagemFinal, setInputMensagemFinal] = useState([""])
+
+    const addMensagem = (e) => {
+        e.preventDefault();
+    
+        const novaMensagem = {inputNome, InputMensagem}
+        const mensagemFinalnoDisplay = [...inputMensagemFinal, novaMensagem]
+        setInputMensagemFinal(mensagemFinalnoDisplay)
     }
-    function insereMensagem(event){
-		setMensagem(event.target.value)
+    
+    const mensagemExibida = inputMensagemFinal.map (() => {
+    
+        return inputMensagemFinal
+    })
+
+
+    const insereNome = (e) => {
+		setInputNome(e.target.value)
+    }
+
+    const insereMensagem= (e) => {
+		setInputMensagem(e.target.value)
     }
     return (
+    <div>
+
         <DisplayStyle>
             <CaixaInput>
-                <label for="nome"> Remetente: </label>
-                <input name="Nome" size="20" onChange={insereNome} value={nome}></input>
-                <label for="mensagem"> Mensagem: </label>
-                <input name="Mensagem" size="30" onChange={insereMensagem} value={mensagem}></input> <button>Enviar Mensagem</button>
+                <label> Remetente: </label>
+                <input 
+                    placeholder='Insira seu Nome'
+                    size="20"
+                    onChange={insereNome} 
+                    value={inputNome}>
+                </input>
+                
+                <label> Mensagem: </label>
+                <input 
+                    placeholder='Mensagem' 
+                    size="30" 
+                    onChange={insereMensagem} 
+                    value={InputMensagem}>
+                </input>
+                
+                <button onClick={addMensagem}>Enviar Mensagem</button>    
+         
             </CaixaInput>
+
+            
         </DisplayStyle>
+        <CaixaDeMensagem>
+                {mensagemExibida}
+            </CaixaDeMensagem> 
+                    </div>
+        
     )    
 }
 
