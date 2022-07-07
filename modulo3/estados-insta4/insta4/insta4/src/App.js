@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import Post from './components/Post/Post';
+import { useState } from 'react';
 
 
 const MainContainer = styled.div`
@@ -11,7 +12,7 @@ const MainContainer = styled.div`
 `
 function App() {
 
-  const posts = [
+  const [posts, setPosts] = useState ([
     {
       nomeUsuario: 'Paulinha',
       fotoUsuario: "https://picsum.photos/50/50",
@@ -27,16 +28,64 @@ function App() {
       fotoUsuario: 'https://i.pinimg.com/236x/f8/5e/ce/f85ece91e4bfbe9544cbdc40cf03a9c3.jpg',
       fotoPost: 'https://wikiimg.tojsiabtv.com/wikipedia/commons/thumb/4/42/Shaqi_jrvej.jpg/1200px-Shaqi_jrvej.jpg'
     }
-  ]
+  ])
+
+  const [inputNomeUsuario, setInputNomeUsuario] = useState ("")
+  const [inputImagemPost, setInputImagemPost] = useState("")
+  const [inputFotoUsuario, setInputFotoUsuario] = useState("")
+
+  const publicarPost = () => {
+
+
+    const novaPublicacao = {nomeUsuario: inputNomeUsuario, fotoUsuario: inputFotoUsuario, fotoPost: inputImagemPost}
+    setPosts ([...posts, novaPublicacao])
+  }
+
+  const handleInputFoto = (e) => {
+    setInputFotoUsuario(e.target.value)
+  }
+
+  const handleInputNome = (e) => {
+    setInputNomeUsuario(e.target.value)
+  }
+
+  const handleInputPost = (e) => {
+    setInputImagemPost(e.target.value)
+  }
 
   const postsFiltrados = posts.map ((nome, index) => {
     return ( 
       <Post key={index} nomeUsuario={nome.nomeUsuario} fotoUsuario={nome.fotoUsuario} fotoPost={nome.fotoPost}/>
-  )})
+  )
+})
 
 return(
   <MainContainer>
     {postsFiltrados}
+    <form>
+      <label>Sua Foto:</label>
+      <input
+        placeholder='link da sua foto'
+        value={inputFotoUsuario}
+        onChange={handleInputFoto}
+        />
+
+      <label>Seu nome:</label>
+        <input
+          placeholder='seu nome'
+          value={inputNomeUsuario}
+          onChange={handleInputNome}
+        />
+
+      <label>Seu post:</label>
+        <input
+        placeholder='link do seu post'
+        value={inputImagemPost}
+        onChange={handleInputPost}
+        />
+
+      <button onClick={publicarPost}>Enviar</button>
+    </form>
   </MainContainer>
 )
 }
