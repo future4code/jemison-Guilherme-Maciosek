@@ -1,66 +1,56 @@
 import React, { useState } from 'react'
-import { DisplayStyle } from "./displayStyle";
-import { CaixaInput } from './displayStyle';
-import { CaixaDeMensagem} from './displayStyle'
+import { Chat, DisplayStyle, CaixaInput } from "./displayStyle";
+
+
+
 
 function DisplayLabenu () {
-    const [inputNome, setInputNome] = useState ("")
-    const [InputMensagem, setInputMensagem] = useState ("")
-    const [inputMensagemFinal, setInputMensagemFinal] = useState([""])
+    const [nome, setNome] = useState("")
+    const [mensagem, setMensagem] = useState("")
+    const [mensagemExibida, setMensagemExibida] = useState([{nomeRemetente: '', mensagemRemetente: ''}])
 
-    const addMensagem = (e) => {
-        e.preventDefault();
-    
-        const novaMensagem = {inputNome, InputMensagem}
-        const mensagemFinalnoDisplay = [...inputMensagemFinal, novaMensagem]
-        setInputMensagemFinal(mensagemFinalnoDisplay)
+    const publicarMensagem = (e) => {
+        e.preventDefault()
+        const novaMensagemUsuario = {nomeRemetente: nome, mensagemRemetente: mensagem}
+        setMensagemExibida ([...mensagemExibida, novaMensagemUsuario])
     }
-    
-    const mensagemExibida = inputMensagemFinal.map (() => {
-    
-        return inputMensagemFinal
+
+	const insereNome = (e) => {
+		setNome(e.target.value)
+    }
+    const insereMensagem = (e) => {
+		setMensagem(e.target.value)
+    }
+
+    const mensagemNoDisplay = mensagemExibida.map((display, index) => {
+        return (
+            <Chat key={index}>{display.nomeRemetente} {display.mensagemRemetente}</Chat>
+        )
     })
 
-
-    const insereNome = (e) => {
-		setInputNome(e.target.value)
-    }
-
-    const insereMensagem= (e) => {
-		setInputMensagem(e.target.value)
-    }
     return (
-    <div>
-
-        <DisplayStyle>
-            <CaixaInput>
-                <label> Remetente: </label>
-                <input 
-                    placeholder='Insira seu Nome'
-                    size="20"
-                    onChange={insereNome} 
-                    value={inputNome}>
-                </input>
-                
-                <label> Mensagem: </label>
-                <input 
-                    placeholder='Mensagem' 
-                    size="30" 
-                    onChange={insereMensagem} 
-                    value={InputMensagem}>
-                </input>
-                
-                <button onClick={addMensagem}>Enviar Mensagem</button>    
-         
-            </CaixaInput>
-
-            
-        </DisplayStyle>
-        <CaixaDeMensagem>
-                {mensagemExibida}
-            </CaixaDeMensagem> 
-                    </div>
         
+        <DisplayStyle> 
+            <Chat>
+                {mensagemNoDisplay}
+            </Chat>            
+                <CaixaInput>
+                    <label> Remetente: </label>
+                        <input 
+                            placeholder='Seu nome'
+                            value={nome} 
+                            onChange={insereNome}    
+                            />
+                    <label> Mensagem: </label>
+                        <input 
+                            name="Mensagem" 
+                            value={mensagem}
+                            onChange={insereMensagem} 
+                            /> 
+
+                        <button onClick={publicarMensagem}>Enviar Mensagem</button>
+                    </CaixaInput>
+        </DisplayStyle>
     )    
 }
 
