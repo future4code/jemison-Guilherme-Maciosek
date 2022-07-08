@@ -34,8 +34,8 @@ function App() {
   const [inputImagemPost, setInputImagemPost] = useState("")
   const [inputFotoUsuario, setInputFotoUsuario] = useState("")
 
-  const publicarPost = () => {
-
+  const publicarPost = (e) => {
+    e.preventDefault()
     const novaPublicacao = {nomeUsuario: inputNomeUsuario, fotoUsuario: inputFotoUsuario, fotoPost: inputImagemPost}
     setPosts ([...posts, novaPublicacao])
   }
