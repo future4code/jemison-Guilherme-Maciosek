@@ -9,27 +9,30 @@ export const DivPai =styled.div`
 
 export const DivDisplay =styled.div`
     display: flex;
-    flex-direction: row;
+
 `
 
 export const DisplayStyle = styled.div`
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
     background-color: white;
     height: 80vh;
     width: 140vh;
-    justify-content: center;
-    align-items: flex-end;
     padding-bottom: 10px;
 `
 
 export const CaixaInput = styled.section`
-    text-align: center;
-    justify-content: end;
-    
+    display: flex;
+    justify-content: center;
+
 `
 
-export const CaixaDeMensagem = styled.p`
+export const Chat = styled.div`
     display: flex;
-    background-color: black;
-    size: 50px;
+    flex-direction: column;
+    
+    align-items: right;
+    text-align: end;
 `

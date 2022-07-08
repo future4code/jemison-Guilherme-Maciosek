@@ -7,7 +7,7 @@ import { Chat, DisplayStyle, CaixaInput } from "./displayStyle";
 function DisplayLabenu () {
     const [nome, setNome] = useState("")
     const [mensagem, setMensagem] = useState("")
-    const [mensagemExibida, setMensagemExibida] = useState([{nomeRemetente: '', mensagemRemetente: ''}])
+    const [mensagemExibida, setMensagemExibida] = useState([{nomeRemetente:'', mensagemRemetente:''}])
 
     const publicarMensagem = (e) => {
         e.preventDefault()
