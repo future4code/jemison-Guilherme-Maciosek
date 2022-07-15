@@ -12,9 +12,10 @@ import { DivPai } from './components/display/displayStyle';
 
 
 
+
 function App() {
   return (
-    <DivPai>   
+    <DivPai>
       <HeaderLabenu         
         nomeLabenu={'LabZap'} 
       />
