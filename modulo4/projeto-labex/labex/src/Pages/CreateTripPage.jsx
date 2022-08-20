@@ -1,9 +1,12 @@
 import axios from "axios";
-import React from "react";
 import { urlCreateTrip } from "../url/url";
 import { useForm } from "../hooks/useForm";
 
+
 function CreateTripPage() {
+
+  // const navigate = useNavigate()
+
   const [body, onChange, clear] = useForm({
     nome: "",
     planet: "",
