@@ -2,16 +2,19 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
+import useProtectedPage from "../hooks/useProtectedPage";
 
 
 function LoginPage () {
+
+    // useProtectedPage()
 
     const navigate = useNavigate()
     const [form, onChange, clear] = useForm({ email: "", password: "" })
 
 
     const fazerLogin = (event) => {
-        event.preventDefault() //evita que a página seja renderizada novamente ao enviar o formulário
+        event.preventDefault() 
 
         axios.post("https://us-central1-labenu-apis.cloudfunctions.net/labeX/darvas/login",
             form)

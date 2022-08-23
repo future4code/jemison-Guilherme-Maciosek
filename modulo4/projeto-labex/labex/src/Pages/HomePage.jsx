@@ -1,8 +1,24 @@
 import React from "react";
 import { useRequestData } from "../hooks/useRequestData"
 import { urlTrips } from "../url/url";
+import { useNavigate } from "react-router-dom";
 
 function HomePage () {
+
+    const navigate = useNavigate();
+    const goToCreatePage = () => {
+        navigate("/criar-viagem");
+      };
+      const goToApplication = () => {
+        navigate("/formulario");
+      };
+      const goToTripDetail = () => {
+        navigate("/detalhes-da-viagem");
+      };
+      const goToListTrip = ()=> {
+        navigate("/detalhes-da-viagem")
+      }
+
     const [data, loadingViagens, errorViagens] = useRequestData(`${urlTrips}guilherme-maciosek-jemison/trips`)
     
     const displayList = 

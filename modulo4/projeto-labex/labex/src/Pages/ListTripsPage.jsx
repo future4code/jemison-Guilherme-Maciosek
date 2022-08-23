@@ -8,8 +8,18 @@ function ListTripsPage () {
 
     const navigate = useNavigate();
     const goToCreatePage = () => {
-        navigate("/criar-viagem")
-    }
+        navigate("/criar-viagem");
+      };
+      const goToApplication = () => {
+        navigate("/formulario");
+      };
+      const goToTripDetail = () => {
+        navigate("/detalhes-da-viagem");
+      };
+      const goToListTrip = ()=> {
+        navigate("/detalhes-da-viagem")
+      }
+
 
     useEffect(() => {
         const token = localStorage.getItem("token");
@@ -29,8 +39,10 @@ function ListTripsPage () {
     return(
         <>
             <h1>MyTrips</h1>
-
             <button onClick={goToCreatePage}>Ir para Criar Viagem</button>
+            <button onClick={goToApplication}>Ir para Formulário</button>
+            <button onClick={goToTripDetail}>Ir para Detalhes da Viagem</button>
+            <button onClick={goToListTrip}>Detahes da viagem</button>
         </>
     )
 }

@@ -10,5 +10,5 @@ export function useForm  (initialState) {
     const clear =()=>{
         setForm(initialState)
     }
-   return [form, onChange, clear]    
+   return {form, onChange, clear}    
 }
