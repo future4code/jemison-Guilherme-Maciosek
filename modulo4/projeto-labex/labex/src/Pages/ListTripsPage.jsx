@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { urlTrips } from "../url/url";
 import { useEffect } from "react";
@@ -13,25 +13,22 @@ function ListTripsPage () {
       const goToApplication = () => {
         navigate("/formulario");
       };
-      const goToTripDetail = () => {
-        navigate("/detalhes-da-viagem");
+      const goToTripDetail = (id) => {
+        navigate(`/detalhes-da-viagem?id=${id}`);
       };
-      const goToListTrip = ()=> {
-        navigate("/detalhes-da-viagem")
-      }
-
+      const [list, setList] = useState ([])
 
     useEffect(() => {
         const token = localStorage.getItem("token");
         
         axios.get(
-            (`${urlTrips}trips`),
+            (`${urlTrips}darvas/trips`),
             {
                 headers: {
                     auth: token
                 }
             }).then((response) => {
-                console.log(response.data)
+                setList(response.data.trips)
             }).catch((error) => {
                 console.log("deu erro", error.response)
             })
@@ -41,8 +38,17 @@ function ListTripsPage () {
             <h1>MyTrips</h1>
             <button onClick={goToCreatePage}>Ir para Criar Viagem</button>
             <button onClick={goToApplication}>Ir para Formulário</button>
-            <button onClick={goToTripDetail}>Ir para Detalhes da Viagem</button>
-            <button onClick={goToListTrip}>Detahes da viagem</button>
+            <br />
+            <div>
+                {list.map((item, index)=>(
+                    <div key={index}>
+                        <span>
+                        {item.description}
+                        </span>
+                        <button onClick={()=>goToTripDetail(item.id)}>Ir para Detalhes da Viagem</button>
+                    </div>
+                ))}
+            </div>
         </>
     )
 }

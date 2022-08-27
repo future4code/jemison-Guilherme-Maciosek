@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
-import useProtectedPage from "../hooks/useProtectedPage";
+// import useProtectedPage from "../hooks/useProtectedPage";
 
 
 function LoginPage () {

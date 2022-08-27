@@ -22,5 +22,5 @@ export function useRequestData  (url) {
             })
         }, [url])
 
-    return [data, isloading, error]
+    return {data, isloading, error}
 }
