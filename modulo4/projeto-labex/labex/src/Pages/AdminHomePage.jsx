@@ -1,10 +1,14 @@
 import React from "react";
 
-function AdminHomePage () {
 
-    return (
-        <h1>Admin Page</h1>
-    )
+function ListTripsPage() {
+
+  return (
+    <>
+      <h1>MyTrips</h1>
+    </>
+  );
 }
 
-export default AdminHomePage
+export default ListTripsPage;
+
