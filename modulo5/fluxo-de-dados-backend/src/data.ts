@@ -1,19 +1,19 @@
+import { Products } from "./type"
 
-
-export const data: Products[] = [
+export const products: Products[] = [
     {
-        id: 1,
+        id: "1",
         name: "TV",
-        price: "1300"
+        price: 1300
     },
     {
-        id: 2,
+        id: "2",
         name: "Panela",
-        price: "250"
+        price: 250
     },
     {
-        id: 3,
+        id: "3",
         name: "Monitor",
-        price: "2300"
+        price: 2300
     },
 ]
