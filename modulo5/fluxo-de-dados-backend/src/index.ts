@@ -51,7 +51,7 @@ app.get("/lista-produtos", (req: Request, res: Response)=> {
 
 app.put("/altera-preco", (req: Request, res: Response)=> {
 
-    const novoPreco = req.body.name
+    const novoPreco = req.body
     const {id, name, price} = req.body
 
     if(!novoPreco || !id|| !name || !price) {
