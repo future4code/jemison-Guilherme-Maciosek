@@ -22,11 +22,7 @@ export class UserDatabase extends BaseDatabase {
     try {
       await UserDatabase.connection
         .insert({
-          id: user.id,
-          name: user.name,
-          nickname: user.nickname,
-          email: user.email,
-          password: user.password,
+          user
         })
         .into("Auth_users");
     } catch (error: any) {
